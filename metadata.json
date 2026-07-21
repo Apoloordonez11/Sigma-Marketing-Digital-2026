@@ -1,0 +1,6 @@
+{
+  "name": "Sigma Agency",
+  "description": "Sigma Agency - Sistema de Crecimiento Conectado con IA para agencias de marketing B2B",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

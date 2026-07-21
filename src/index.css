@@ -1,0 +1,111 @@
+@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700;800&family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
+  --font-display: "Space Grotesk", sans-serif;
+  --font-mono: "JetBrains Mono", monospace;
+
+  --color-brand-violet: #745EF0;
+  --color-brand-midnight: #0F0730;
+  --color-brand-teal: #50DBCA;
+  --color-brand-dark: #FFFFFF;
+  --color-brand-light: #0F0730;
+}
+
+@utility blueprint-bg {
+  background-size: 40px 40px;
+  background-image: 
+    linear-gradient(to right, rgba(116, 94, 240, 0.05) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(116, 94, 240, 0.05) 1px, transparent 1px);
+}
+
+@utility blueprint-grid {
+  background-image: 
+    linear-gradient(rgba(116, 94, 240, 0.05) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(116, 94, 240, 0.05) 1px, transparent 1px);
+  background-size: 40px 40px;
+}
+
+@utility glass-card {
+  background: rgba(15, 7, 48, 0.6);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(80, 219, 202, 0.2);
+  box-shadow: 0 0 20px rgba(116, 94, 240, 0.15);
+}
+
+@utility glow-border {
+  border: 1px solid rgba(80, 219, 202, 0.3);
+  box-shadow: 0 0 20px rgba(116, 94, 240, 0.15);
+}
+
+@utility glow-border-teal {
+  border: 1px solid rgba(80, 219, 202, 0.4);
+  box-shadow: 0 0 25px rgba(80, 219, 202, 0.2);
+}
+
+@utility glow-text-teal {
+  text-shadow: 0 0 10px rgba(80, 219, 202, 0.5);
+}
+
+@utility glow-mint {
+  box-shadow: 0 0 15px rgba(80, 219, 202, 0.4);
+}
+
+@utility gradient-text {
+  background: linear-gradient(135deg, #745EF0 0%, #50DBCA 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+@utility gradient-bg {
+  background: linear-gradient(135deg, #745EF0 0%, #50DBCA 100%);
+}
+
+@utility sigma-gradient {
+  background: linear-gradient(135deg, #745EF0 0%, #50DBCA 100%);
+}
+
+@utility node-pulse {
+  box-shadow: 0 0 0 0 rgba(116, 94, 240, 0.4);
+  animation: pulse 2s infinite;
+}
+
+@keyframes pulse-glow {
+  0%, 100% {
+    box-shadow: 0 0 15px rgba(116, 94, 240, 0.2);
+  }
+  50% {
+    box-shadow: 0 0 25px rgba(80, 219, 202, 0.4);
+  }
+}
+
+@keyframes pulse {
+  0% { box-shadow: 0 0 0 0 rgba(116, 94, 240, 0.4); }
+  70% { box-shadow: 0 0 0 15px rgba(116, 94, 240, 0); }
+  100% { box-shadow: 0 0 0 0 rgba(116, 94, 240, 0); }
+}
+
+@utility animate-pulse-glow {
+  animation: pulse-glow 3s infinite ease-in-out;
+}
+
+/* Custom styles for animations and global components */
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: var(--font-sans);
+  color: #FFFFFF;
+  background-color: #0F0730;
+  overflow-x: hidden;
+}
+
+.text-gradient {
+  background: linear-gradient(135deg, #745EF0 0%, #50DBCA 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
